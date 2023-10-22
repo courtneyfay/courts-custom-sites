@@ -1,7 +1,7 @@
 <div class="page">
     <!-- Section 1 -->
     <div class="section odd">
-        <h1 class="header">Court's Custom Sites</h1>
+        <h1>Court's Custom Sites</h1>
     </div>
 
     <!-- Section 2 -->
@@ -13,10 +13,12 @@
     <div class="section odd">
         <h2>Are you tired of your</h2>
 
-        <h2>Wix</h2>
-        <h2>Weebly</h2>
-        <h2>Squarespace</h2>
-        <h2>Wordpress</h2>
+        <ul>
+            <li><h2>Wix</h2></li>
+            <li><h2>Weebly</h2></li>
+            <li><h2>Squarespace</h2></li>
+            <li><h2>Wordpress</h2></li>
+        </ul>
 
         <h2>website?</h2>
     </div>
@@ -28,8 +30,7 @@
 
     <!-- Section 5 -->
     <div class="section odd">
-        <h2>Let's chat!</h2>
-        <h2>fay.courtney@gmail.com</h2>
+        <h2>Let's chat! Email me at fay.courtney@gmail.com</h2>
     </div>
 </div>
 
@@ -39,6 +40,10 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    li {
+        list-style-type: none;
     }
 
     .page {
@@ -65,8 +70,4 @@
     .even {
         background-color: orange;
     }
-    
-    /* .header {
-        background-color: orange;
-    } */
 </style>
