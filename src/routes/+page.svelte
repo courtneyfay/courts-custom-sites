@@ -10,7 +10,7 @@
     </div>
 
     <!-- Section 3 -->
-    <div class="section odd">
+    <div class="section even">
         <h2>Are you tired of your</h2>
 
         <ul>
@@ -56,8 +56,6 @@
     }
     
     .section {
-        min-height: 90vh;
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -65,9 +63,11 @@
 
     .odd {
         background-color: hotpink;
+        min-height: 20vh;
     }
 
     .even {
         background-color: orange;
+        min-height: 17vh;
     }
 </style>
