@@ -1,7 +1,11 @@
 <div class="page">
     <!-- Header -->
     <div class="header">
-        <h1>Court's Custom Sites</h1>
+        <h1>
+            <span>&#123;</span>
+            <span>Court's Custom Sites</span>
+            <span>&#125;</span>
+        </h1>
     </div>
 
     <div class="main">
@@ -32,7 +36,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <h2>Let's chat! Email me at fay.courtney@gmail.com</h2>
+        <h2><a href="mailto:fay.courtney@gmail.com">Let's chat!</a></h2>
     </div>
 </div>
 
@@ -50,34 +54,43 @@
 
     .page {
         /* font */
-        color: white;
+        color: #FFEDF0;
 
         /* page layout */
         display: flex;
         flex-direction: column;
+
+        /* background color */
+        background-color: #5F0F40;
+        /* other colors */
+        /* #9A031E - maroon */
+        /* #FB8B24 - light orange */
+        /* #E36414 - dark orange */
+        /* #0F4C5C - turquoise */
     }
 
     .header {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: hotpink;
-        min-height: 20vh;
+        min-height: 15vh;
     }
 
     .main {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        background-color: orange;
-        min-height: 60vh;
+        min-height: 65vh;
     }
 
     .footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: hotpink;
         min-height: 20vh;
+    }
+
+    a {
+        color: white;
     }
 </style>
