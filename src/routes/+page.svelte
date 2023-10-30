@@ -1,3 +1,24 @@
+<script>
+    import { onMount } from 'svelte';
+    import { fly, fade } from "svelte/transition";
+  
+    let sites = [
+        'Wix',
+        'Weebly',
+        'Squarespace',
+        'Wordpress',
+    ];
+    let activeIndex = -1;
+    let status = 'waiting...';
+    let ready = false;
+    // ready = true
+    onMount(() => activeIndex = 0);
+  
+    setInterval(() => {
+     //logic goes here
+    }, 3000);
+  </script>
+
 <div class="page">
     <!-- Header -->
     <div class="header">
@@ -10,27 +31,50 @@
 
     <div class="main">
         <!-- Section 2 -->
-        <div>
-            <h2>Do you freelance or own a small business in Vermont?</h2>
+        <div class="column">
+            <h2>Do you
+            <h2>freelance</h2>
+            or
+            <h2>own a small business</h2>
+            ?</h2>
         </div>
 
         <!-- Section 3 -->
-        <div>
+        <div class="column">
+            <!-- <p>status: {status}</p> -->
+
             <h2>Are you tired of your</h2>
 
-            <ul>
-                <li><h2>Wix</h2></li>
-                <li><h2>Weebly</h2></li>
-                <li><h2>Squarespace</h2></li>
-                <li><h2>Wordpress</h2></li>
-            </ul>
+            {#each sites as site, i}
+                <!-- {#if ready} -->
+                {#if activeIndex === i}
+                    <!-- alternative transitions: typewriter per https://learn.svelte.dev/tutorial/key-blocks -->
+                    <!-- in:fly={{ x: 200, duration: 2000 }}
+                        out:fly={{ y: -200, duration: 2000 }} -->
+                    <h2>
+                        <h2
+                            transition:fade={{ duration: 2000 }}
+                            on:introstart={() => status = 'intro started'}
+                            on:introend={() => status = 'intro ended'}
+                            on:outrostart={() => status = 'outro started'}
+                            on:outroend={() => status = 'outro ended'}
+                        >
+                            {site}
+                        </h2>
+                    </h2>
+                {/if}
+            {/each}
 
             <h2>website?</h2>
         </div>
 
         <!-- Section 4 -->
-        <div>
-            <h2>Do you crave more custom style or functionality?</h2>
+        <div class="column">
+            <h2>Do you crave 
+            <h2>a more custom style</h2>
+            or 
+            <h2>functionality</h2>
+            ?</h2>
         </div>
     </div>
 
@@ -46,10 +90,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-
-    li {
-        list-style-type: none;
     }
 
     .page {
@@ -86,10 +126,16 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        min-height: 60vh;
+        min-height: 55vh;
 
         /* font */
         font-size: 1.4rem;
+    }
+
+    .column {
+        text-align: center;
+        min-width: 23vw;
+        max-width: 23vw;
     }
 
     .footer {
@@ -97,7 +143,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-height: 15vh;
+        min-height: 20vh;
 
         /* font */
         font-size: 2rem;
