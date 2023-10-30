@@ -2,9 +2,9 @@
     <!-- Header -->
     <div class="header">
         <h1>
-            <span>&#123;</span>
+            <span class="accent-color">&#123;</span>
             <span>Court's Custom Sites</span>
-            <span>&#125;</span>
+            <span class="accent-color">&#125;</span>
         </h1>
     </div>
 
@@ -36,7 +36,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <h2><a href="mailto:fay.courtney@gmail.com">Let's chat!</a></h2>
+        <h2><a class="accent-color" href="mailto:fay.courtney@gmail.com">Let's chat!</a></h2>
     </div>
 </div>
 
@@ -55,6 +55,7 @@
     .page {
         /* font */
         color: #FFEDF0;
+        font-family: 'Goudy Bookletter 1911', serif;
 
         /* page layout */
         display: flex;
@@ -64,33 +65,45 @@
         background-color: #5F0F40;
         /* other colors */
         /* #9A031E - maroon */
-        /* #FB8B24 - light orange */
         /* #E36414 - dark orange */
         /* #0F4C5C - turquoise */
     }
 
     .header {
+        /* layout */
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 15vh;
+        max-height: 25vh;
+
+        /* font */
+        font-family: 'Viaoda Libre', serif;
+        font-size: 3rem;
     }
 
     .main {
+        /* layout */
         display: flex;
         align-items: center;
         justify-content: space-around;
-        min-height: 65vh;
+        min-height: 60vh;
+
+        /* font */
+        font-size: 1.4rem;
     }
 
     .footer {
+        /* layout */
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 20vh;
+        max-height: 15vh;
+
+        /* font */
+        font-size: 2rem;
     }
 
-    a {
-        color: white;
+    .accent-color {
+        color: #FB8B24;
     }
 </style>
