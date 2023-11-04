@@ -32,18 +32,16 @@
     <div class="main">
         <!-- Section 2 -->
         <div class="column">
-            <h2>Do you
-            <h2>freelance</h2>
-            or
-            <h2>own a small business</h2>
-            ?</h2>
+            <i class="fa-solid fa-briefcase" />
+            <h2>Do you freelance or own a small business in Vermont?</h2>
         </div>
 
         <!-- Section 3 -->
         <div class="column">
             <!-- <p>status: {status}</p> -->
 
-            <h2>Are you tired of your</h2>
+            <i class="fa-solid fa-palette" />
+            <h2>Do you crave a more custom style or functionality for your</h2>
 
             {#each sites as site, i}
                 <!-- {#if ready} -->
@@ -66,15 +64,6 @@
             {/each}
 
             <h2>website?</h2>
-        </div>
-
-        <!-- Section 4 -->
-        <div class="column">
-            <h2>Do you crave 
-            <h2>a more custom style</h2>
-            or 
-            <h2>functionality</h2>
-            ?</h2>
         </div>
     </div>
 
@@ -134,7 +123,7 @@
 
     .column {
         text-align: center;
-        min-width: 23vw;
+        min-width: 33vw;
         max-width: 23vw;
     }
 
