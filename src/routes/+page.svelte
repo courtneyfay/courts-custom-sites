@@ -8,15 +8,19 @@
         'Squarespace',
         'Wordpress',
     ];
-    let activeIndex = -1;
-    let status = 'waiting...';
-    let ready = false;
-    // ready = true
-    onMount(() => activeIndex = 0);
   
-    setInterval(() => {
-     //logic goes here
-    }, 3000);
+    let i = -1;
+
+    onMount(() => {
+		const interval = setInterval(() => {
+			i += 1;
+			i %= sites.length;
+		}, 4500);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
   </script>
 
 <div class="page">
@@ -30,38 +34,26 @@
     </div>
 
     <div class="main">
-        <!-- Section 2 -->
+        <!-- Section 1 -->
         <div class="column">
             <i class="fa-solid fa-briefcase" />
             <h2>Do you freelance or own a small business in Vermont?</h2>
         </div>
 
-        <!-- Section 3 -->
+        <!-- Section 2 -->
         <div class="column">
-            <!-- <p>status: {status}</p> -->
 
             <i class="fa-solid fa-palette" />
             <h2>Do you crave a more custom style or functionality for your</h2>
 
-            {#each sites as site, i}
-                <!-- {#if ready} -->
-                {#if activeIndex === i}
-                    <!-- alternative transitions: typewriter per https://learn.svelte.dev/tutorial/key-blocks -->
-                    <!-- in:fly={{ x: 200, duration: 2000 }}
-                        out:fly={{ y: -200, duration: 2000 }} -->
+            <!-- alternative transitions: typewriter per https://learn.svelte.dev/tutorial/key-blocks -->
+            {#key i}
                     <h2>
-                        <h2
-                            transition:fade={{ duration: 2000 }}
-                            on:introstart={() => status = 'intro started'}
-                            on:introend={() => status = 'intro ended'}
-                            on:outrostart={() => status = 'outro started'}
-                            on:outroend={() => status = 'outro ended'}
-                        >
-                            {site}
+                        <h2 in:fade>
+                            {sites[i] || sites[3]}
                         </h2>
                     </h2>
-                {/if}
-            {/each}
+            {/key}
 
             <h2>website?</h2>
         </div>
