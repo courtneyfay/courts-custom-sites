@@ -1,36 +1,67 @@
+<script>
+    import { onMount } from 'svelte';
+    import { fly, fade } from "svelte/transition";
+  
+    let sites = [
+        'Wix',
+        'Weebly',
+        'Squarespace',
+        'Wordpress',
+    ];
+  
+    let i = -1;
+
+    onMount(() => {
+		const interval = setInterval(() => {
+			i += 1;
+			i %= sites.length;
+		}, 4500);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
+  </script>
+
 <div class="page">
-    <!-- Section 1 -->
-    <div class="section odd">
-        <h1>Court's Custom Sites</h1>
+    <!-- Header -->
+    <div class="header">
+        <h1>
+            <span class="accent-color">&#123;</span>
+            <span>Court's Custom Sites</span>
+            <span class="accent-color">&#125;</span>
+        </h1>
     </div>
 
-    <!-- Section 2 -->
-    <div class="section even">
-        <h2>Do you freelance or own a small business in Vermont?</h2>
+    <div class="main">
+        <!-- Section 1 -->
+        <div class="column">
+            <i class="fa-solid fa-briefcase" />
+            <h2>Do you freelance or own a small business in Vermont?</h2>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="column">
+
+            <i class="fa-solid fa-palette" />
+            <h2>Do you crave a more custom style or functionality for your</h2>
+
+            <!-- alternative transitions: typewriter per https://learn.svelte.dev/tutorial/key-blocks -->
+            {#key i}
+                    <h2>
+                        <h2 in:fade>
+                            {sites[i] || sites[3]}
+                        </h2>
+                    </h2>
+            {/key}
+
+            <h2>website?</h2>
+        </div>
     </div>
 
-    <!-- Section 3 -->
-    <div class="section even">
-        <h2>Are you tired of your</h2>
-
-        <ul>
-            <li><h2>Wix</h2></li>
-            <li><h2>Weebly</h2></li>
-            <li><h2>Squarespace</h2></li>
-            <li><h2>Wordpress</h2></li>
-        </ul>
-
-        <h2>website?</h2>
-    </div>
-
-    <!-- Section 4 -->
-    <div class="section even">
-        <h2>Do you crave more custom style or functionality?</h2>
-    </div>
-
-    <!-- Section 5 -->
-    <div class="section odd">
-        <h2>Let's chat! Email me at fay.courtney@gmail.com</h2>
+    <!-- Footer -->
+    <div class="footer">
+        <h2><a class="accent-color" href="mailto:fay.courtney@gmail.com">Let's chat!</a></h2>
     </div>
 </div>
 
@@ -42,32 +73,64 @@
         box-sizing: border-box;
     }
 
-    li {
-        list-style-type: none;
-    }
-
     .page {
         /* font */
-        color: white;
+        color: #FFEDF0;
+        font-family: 'Goudy Bookletter 1911', serif;
 
         /* page layout */
         display: flex;
         flex-direction: column;
+
+        /* background color */
+        background-color: #5F0F40;
+        /* other colors */
+        /* #9A031E - maroon */
+        /* #E36414 - dark orange */
+        /* #0F4C5C - turquoise */
     }
-    
-    .section {
+
+    .header {
+        /* layout */
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        max-height: 25vh;
+
+        /* font */
+        font-family: 'Viaoda Libre', serif;
+        font-size: 3rem;
     }
 
-    .odd {
-        background-color: hotpink;
+    .main {
+        /* layout */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 55vh;
+
+        /* font */
+        font-size: 1.4rem;
+    }
+
+    .column {
+        text-align: center;
+        min-width: 33vw;
+        max-width: 23vw;
+    }
+
+    .footer {
+        /* layout */
+        display: flex;
+        align-items: center;
+        justify-content: center;
         min-height: 20vh;
+
+        /* font */
+        font-size: 2rem;
     }
 
-    .even {
-        background-color: orange;
-        min-height: 17vh;
+    .accent-color {
+        color: #FB8B24;
     }
 </style>
