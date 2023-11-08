@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { fly, fade } from "svelte/transition";
+    import { fade } from "svelte/transition";
   
     let sites = [
         'Wix',
@@ -26,7 +26,7 @@
 <div class="page">
     <!-- Header -->
     <div class="header">
-        <h1>
+        <h1 class="logo">
             <span class="accent-color">&#123;</span>
             <span>Court's Custom Sites</span>
             <span class="accent-color">&#125;</span>
@@ -73,6 +73,7 @@
         box-sizing: border-box;
     }
 
+    /* styles for mobile screens */
     .page {
         /* font */
         color: #FFEDF0;
@@ -81,9 +82,10 @@
         /* page layout */
         display: flex;
         flex-direction: column;
+        max-height: 100vh;
 
         /* background color */
-        background-color: #5F0F40;
+        background-color: #5F0F40; /* #5F0F40 - deep purple */
         /* other colors */
         /* #9A031E - maroon */
         /* #E36414 - dark orange */
@@ -95,28 +97,32 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-height: 25vh;
+        text-align: center;
+        min-height: 27vh;
 
         /* font */
         font-family: 'Viaoda Libre', serif;
-        font-size: 3rem;
+        font-size: 1.75rem;
+    }
+
+    .logo {
+        margin: 0;
     }
 
     .main {
         /* layout */
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        min-height: 55vh;
+        min-height: 53vh;
 
         /* font */
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .column {
         text-align: center;
-        min-width: 33vw;
-        max-width: 23vw;
+        max-width: 80vw;
     }
 
     .footer {
@@ -133,4 +139,38 @@
     .accent-color {
         color: #FB8B24;
     }
+
+    /* styles for tablets, desktops, laptops and larger screens */
+    @media (min-width: 768px) {
+        .header {
+            /* layout */
+            max-height: 25vh;
+
+            /* font */
+            font-size: 3rem;
+        }
+
+        .main {
+            /* layout */
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            max-height: 55vh;
+
+            /* font */
+            font-size: 1.4rem;
+        }
+
+        .column {
+            /* layout */
+            min-width: 33vw;
+            max-width: 23vw;
+        }
+
+        .footer {
+            /* layout */
+            max-height: 20vh;
+        }
+    }
+
 </style>
