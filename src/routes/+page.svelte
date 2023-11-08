@@ -1,4 +1,5 @@
 <script>
+    import '@fortawesome/fontawesome-free/css/all.min.css';
     import { onMount } from 'svelte';
     import { fade } from "svelte/transition";
   
