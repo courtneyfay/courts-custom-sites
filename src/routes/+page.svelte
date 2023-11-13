@@ -62,7 +62,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <h2><a class="accent-color" href="mailto:fay.courtney@gmail.com">Let's chat!</a></h2>
+        <h2><a class="accent-color" target="_blank" href="https://calendly.com/courts-custom-sites/">Let's chat!</a></h2>
     </div>
 </div>
 
