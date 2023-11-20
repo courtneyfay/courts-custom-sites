@@ -34,17 +34,18 @@
         </h1>
     </div>
 
-    <div class="main">
+    <!-- Home section -->
+    <div class="home">
         <!-- Section 1 -->
         <div class="column">
-            <i class="fa-solid fa-briefcase" />
+            <i class="fa-solid fa-briefcase icon" />
             <h2>Do you freelance or own a small business in Vermont?</h2>
         </div>
 
         <!-- Section 2 -->
         <div class="column">
 
-            <i class="fa-solid fa-palette" />
+            <i class="fa-solid fa-palette icon" />
             <h2>Do you crave a more custom style or functionality for your</h2>
 
             <!-- alternative transitions: typewriter per https://learn.svelte.dev/tutorial/key-blocks -->
@@ -57,6 +58,22 @@
             {/key}
 
             <h2>website?</h2>
+        </div>
+    </div>
+
+    <!-- About section -->
+    <div class="about">
+        <!-- Section 1 -->
+        <div class="column">
+            <h2>Hey there! I'm Court.</h2>
+            <h3>I've been working in tech for 8+ years, helping build enterprise websites for companies like IHS Markit, NextHealth Technologies and Wagmo.</h3>
+            <h3>Recently, I've started helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</h3>
+            <h3>In my free time, I practice yoga, sing in a choir, craft, cook, play outside in the mountains, and have recently been getting into gardening.</h3>
+        </div>
+    
+        <!-- Section 2 -->
+        <div class="column">
+            <img class="headshot" src="/guitar-headshot.jpg" alt="Court playing the guitar"/>
         </div>
     </div>
 
@@ -83,14 +100,15 @@
         /* page layout */
         display: flex;
         flex-direction: column;
-        max-height: 100vh;
 
         /* background color */
-        background-color: #5F0F40; /* #5F0F40 - deep purple */
-        /* other colors */
+        background-color: #5F0F40; 
+        /* colors */
+        /* #5F0F40 - deep purple */
         /* #9A031E - maroon */
         /* #E36414 - dark orange */
         /* #0F4C5C - turquoise */
+        /* #FB8B24 - light yellow */
     }
 
     .header {
@@ -99,31 +117,62 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        min-height: 27vh;
+        min-height: 30vh;
 
         /* font */
         font-family: 'Viaoda Libre', serif;
         font-size: 1.75rem;
     }
 
+    .accent-color {
+        color: #FB8B24;
+    }
+
     .logo {
         margin: 0;
     }
 
-    .main {
-        /* layout */
+    .home, .about {
+        /* internal layout */
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 53vh;
+
+        /* external layout */
+        padding: 14% 0;
 
         /* font */
         font-size: 1rem;
     }
 
+    .home {
+        /* layout */
+        min-height: 60vh;
+
+        /* colors */
+        background-color: white;
+        color: #5F0F40;
+    }
+
+    .icon {
+        color: #E36414;
+    }
+
     .column {
         text-align: center;
         max-width: 80vw;
+    }
+
+    .about {
+        /* layout */
+        min-height: 90vh;
+
+        /* colors */
+        background-color: #0F4C5C;
+    }
+
+    .headshot {
+        width: 75%;
     }
 
     .footer {
@@ -137,10 +186,6 @@
         font-size: 2rem;
     }
 
-    .accent-color {
-        color: #FB8B24;
-    }
-
     /* styles for tablets, desktops, laptops and larger screens */
     @media (min-width: 768px) {
         .header {
@@ -151,12 +196,13 @@
             font-size: 3rem;
         }
 
-        .main {
+        .home, .about {
             /* layout */
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
-            max-height: 55vh;
+            max-height: 75vh;
+            padding: 0;
 
             /* font */
             font-size: 1.4rem;
