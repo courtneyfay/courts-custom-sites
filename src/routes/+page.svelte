@@ -66,7 +66,8 @@
         <!-- Section 1 -->
         <div class="column">
             <h2>Hey there! I'm Court.</h2>
-            <h3>I've been working in tech for 8+ years, helping build websites for companies like IHS Markit, NextHealth Technologies and Wagmo.</h3>
+            <h3>I've been working in tech for 8+ years, helping build enterprise websites for companies like IHS Markit, NextHealth Technologies and Wagmo.</h3>
+            <h3>Recently, I've started helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</h3>
             <h3>In my free time, I practice yoga, sing in a choir, craft, cook, play outside in the mountains, and have recently been getting into gardening.</h3>
         </div>
     
@@ -131,19 +132,26 @@
         margin: 0;
     }
 
-    .home {
-        /* layout */
+    .home, .about {
+        /* internal layout */
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        /* external layout */
+        padding: 14% 0;
+
+        /* font */
+        font-size: 1rem;
+    }
+
+    .home {
+        /* layout */
         min-height: 60vh;
 
         /* colors */
         background-color: white;
         color: #5F0F40;
-
-        /* font */
-        font-size: 1rem;
     }
 
     .icon {
@@ -157,14 +165,10 @@
 
     .about {
         /* layout */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         min-height: 90vh;
-        background-color: #0F4C5C;
 
-        /* font */
-        font-size: 1rem;
+        /* colors */
+        background-color: #0F4C5C;
     }
 
     .headshot {
@@ -198,6 +202,7 @@
             align-items: center;
             justify-content: space-around;
             max-height: 75vh;
+            padding: 0;
 
             /* font */
             font-size: 1.4rem;
