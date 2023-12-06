@@ -35,31 +35,55 @@
         </h1>
     </div>
 
-    <!-- Home section -->
-    <div class="home">
-        <!-- Section 1 -->
-        <div class="column">
+    <!-- Client section -->
+    <div class="client">
+        <!-- Local -->
+        <div class="definition definition-1">
             <i class="fa-solid fa-briefcase icon" />
-            <h2>Do you freelance or own a small business in Vermont?</h2>
+            <h2>
+                Do you freelance <br />
+                or own a small business <br />
+                in Vermont?
+            </h2>
         </div>
 
-        <!-- Section 2 -->
-        <div class="column">
+        <!-- Template website -->
+        <div class="definition definition-2">
+            <i class="fa-solid fa-copy icon" />
+            <h2>
+                Do you need a
+                {#key i}
+                    <div in:fade>
+                        {sites[i] || sites[3]}
+                    </div>
+                {/key}
+                website?
+            </h2>
+        </div>
 
+        <!-- Custom website -->
+        <div class="definition definition-3">
             <i class="fa-solid fa-palette icon" />
-            <h2>Do you crave a more custom style or functionality for your</h2>
-
-            <!-- alternative transitions: typewriter per https://learn.svelte.dev/tutorial/key-blocks -->
-            {#key i}
-                    <h2>
-                        <h2 in:fade>
-                            {sites[i] || sites[3]}
-                        </h2>
-                    </h2>
-            {/key}
-
-            <h2>website?</h2>
+            <h2>
+                Do you crave <br />
+                customization <br />
+                of your website?
+            </h2>
         </div>
+    </div>
+
+    <!-- FAQ section -->
+    <div class="faq">
+        <h2>I'm happy to help you build out your template site, but if you need something custom or a little 
+            <p class="weird">
+                w
+                <span class="spin-to-the-left">e</span>
+                <span class="spin-upside-down">i</span>
+                <span class="spin-to-the-right">r</span>
+                <span class="slide-down">d,</span>
+            </p>
+            <span class="right-justified">I would <span class="italic">love</span> to help you build that.</span>
+        </h2>
     </div>
 
     <!-- About section -->
@@ -88,7 +112,7 @@
         </h2>
         <div class="social">
             <a target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-linkedin" />
             </a>
             <!-- calc current year -->
             <p>© { year } Court's Custom Sites. Website by Courtney Noyes.</p>
@@ -145,21 +169,10 @@
         margin: 0;
     }
 
-    .home, .about {
-        /* internal layout */
+    .client {
+        /* layout */
         display: flex;
         flex-direction: column;
-        align-items: center;
-
-        /* external layout */
-        padding: 14% 0;
-
-        /* font */
-        font-size: 1rem;
-    }
-
-    .home {
-        /* layout */
         min-height: 60vh;
 
         /* colors */
@@ -167,28 +180,94 @@
         color: #5F0F40;
     }
 
+    .definition {
+        /* layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 4% 0;
+
+        /* style */
+        background-color: #E36414;
+        min-width: 300px;
+        min-height: 300px;
+        border-radius: 50%;
+
+        /* font */
+        font-size: 1rem;
+        text-align: center;
+    }
     .icon {
-        color: #E36414;
+        color: white;
+        font-size: 2rem;
     }
 
-    .column {
+    .faq {
+        /* layout */
+        padding: 5% 10%;
+        min-height: 50vh;
+
+        /* styles */
+        background-color: #9A031E;
+
+        /* font */
+        font-size: 1.5rem;
+    }
+    .weird {
+        /* font */
         text-align: center;
-        max-width: 80vw;
+        font-size: 4rem;
+        letter-spacing: 5px;
+    }
+    .spin-to-the-left {
+        display: inline-block;
+        transform: translateY(25%) rotateZ(310deg);
+    }
+    .spin-upside-down {
+        display: inline-block;
+        transform: translateY(50%) rotateZ(180deg);
+    }
+    .spin-to-the-right {
+        display: inline-block;
+        transform: translateY(75%) rotateZ(70deg);
+    }
+    .slide-down {
+        display: inline-block;
+        transform: translateY(100%);
+    }
+    .right-justified {
+        display: block;
+        text-align: right;
+        padding-top: 15%;
+    }
+    .italic {
+        font-style: italic;
     }
 
     .about {
-        /* layout */
+        /* internal layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* external layout */
         min-height: 90vh;
+        padding: 14% 0;
 
         /* colors */
         background-color: #0F4C5C;
 
+        /* font */
+        font-size: 1rem;
     }
     .about p {
         /* font */
         font-family: 'Hedvig Letters Sans', sans-serif;
     }
-
+    .column {
+        text-align: center;
+        max-width: 80vw;
+    }
     .headshot {
         width: 75%;
     }
@@ -220,7 +299,57 @@
             font-size: 3rem;
         }
 
-        .home, .about {
+        .client {
+            /* layout */
+            position: relative;
+            min-height: 175vh;
+        }
+        .definition {
+            /* layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 3% 0;
+            min-width: 500px;
+            min-height: 500px;
+            border-radius: 50%;
+
+            /* style */
+            background-color: #E36414;
+
+            /* font */
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .definition-1 {
+            position: absolute;
+            left: 15%;
+            top: 3%;
+        }
+        .definition-2 {
+            position: absolute;
+            right: 10%;
+            top: 30%;
+        }
+        .definition-3 {
+            position: absolute;
+            left: 22.5%;
+            bottom: 5%;
+        }
+        .icon {
+            font-size: 4rem;
+        }
+
+        .faq {
+            /* font */
+            font-size: 2.5rem;
+        }
+        .right-justified {
+            /* layout */
+            padding-top: 10%;
+        }
+
+        .client, .about {
             /* layout */
             flex-direction: row;
             align-items: center;
