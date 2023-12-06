@@ -38,7 +38,7 @@
     <!-- Client section -->
     <div class="client">
         <!-- Local -->
-        <div class="definition">
+        <div class="definition definition-1">
             <i class="fa-solid fa-briefcase icon" />
             <h2>
                 Do you freelance <br />
@@ -48,7 +48,7 @@
         </div>
 
         <!-- Template website -->
-        <div class="definition">
+        <div class="definition definition-2">
             <i class="fa-solid fa-copy icon" />
             <h2>
                 Do you need a
@@ -62,7 +62,7 @@
         </div>
 
         <!-- Custom website -->
-        <div class="definition">
+        <div class="definition definition-3">
             <i class="fa-solid fa-palette icon" />
             <h2>
                 Do you crave <br />
@@ -176,10 +176,8 @@
 
     .client {
         /* layout */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 60vh;
+        position: relative;
+        min-height: 175vh;
 
         /* colors */
         background-color: white;
@@ -203,7 +201,21 @@
         font-size: 1.5rem;
         text-align: center;
     }
-
+    .definition-1 {
+        position: absolute;
+        left: 15%;
+        top: 3%;
+    }
+    .definition-2 {
+        position: absolute;
+        right: 10%;
+        top: 30%;
+    }
+    .definition-3 {
+        position: absolute;
+        left: 22.5%;
+        bottom: 5%;
+    }
     .icon {
         color: white;
         font-size: 4rem;
@@ -258,7 +270,7 @@
             font-size: 3rem;
         }
 
-        .help, .about {
+        .client, .about {
             /* layout */
             flex-direction: row;
             align-items: center;
