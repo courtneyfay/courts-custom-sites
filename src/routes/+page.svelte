@@ -35,30 +35,46 @@
         </h1>
     </div>
 
-    <!-- Home section -->
-    <div class="home">
-        <!-- Section 1 -->
-        <div class="column">
+    <!-- Client section -->
+    <div class="client">
+        <!-- Local -->
+        <div class="definition">
             <i class="fa-solid fa-briefcase icon" />
-            <h2>Do you freelance or own a small business in Vermont?</h2>
+            <h2>
+                Do you freelance <br />
+                or own a small business <br />
+                in Vermont?
+            </h2>
         </div>
 
-        <!-- Section 2 -->
-        <div class="column">
+        <!-- Template website -->
+        <div class="definition">
+            <i class="fa-solid fa-copy icon" />
+            <h2>
+                Do you need a
+                {#key i}
+                    <div in:fade>
+                        {sites[i] || sites[3]}
+                    </div>
+                {/key}
+                website?
+            </h2>
+        </div>
 
+        <!-- Custom website -->
+        <div class="definition">
             <i class="fa-solid fa-palette icon" />
-            <h2>Do you crave a more custom style or functionality for your</h2>
+            <h2>
+                Do you crave <br />
+                customization <br />
+                of your website?
+            </h2>
 
-            <!-- alternative transitions: typewriter per https://learn.svelte.dev/tutorial/key-blocks -->
-            {#key i}
-                    <h2>
-                        <h2 in:fade>
-                            {sites[i] || sites[3]}
-                        </h2>
-                    </h2>
-            {/key}
+            <!-- todo: animation -->
 
-            <h2>website?</h2>
+            <!-- todo: sound effect -->
+
+            <!-- todo: something 3D -->
         </div>
     </div>
 
@@ -88,7 +104,7 @@
         </h2>
         <div class="social">
             <a target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-linkedin" />
             </a>
             <!-- calc current year -->
             <p>© { year } Court's Custom Sites. Website by Courtney Noyes.</p>
@@ -145,7 +161,7 @@
         margin: 0;
     }
 
-    .home, .about {
+    .about {
         /* internal layout */
         display: flex;
         flex-direction: column;
@@ -158,8 +174,11 @@
         font-size: 1rem;
     }
 
-    .home {
+    .client {
         /* layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         min-height: 60vh;
 
         /* colors */
@@ -167,8 +186,27 @@
         color: #5F0F40;
     }
 
+    .definition {
+        /* layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3% 0;
+        min-width: 500px;
+        min-height: 500px;
+        border-radius: 50%;
+
+        /* style */
+        background-color: #E36414;
+
+        /* font */
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
     .icon {
-        color: #E36414;
+        color: white;
+        font-size: 4rem;
     }
 
     .column {
@@ -220,7 +258,7 @@
             font-size: 3rem;
         }
 
-        .home, .about {
+        .help, .about {
             /* layout */
             flex-direction: row;
             align-items: center;
