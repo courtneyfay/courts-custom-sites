@@ -1,25 +1,26 @@
 <script>
-    import '@fortawesome/fontawesome-free/css/all.min.css';
-    import { onMount } from 'svelte';
-    import { fade } from "svelte/transition";
+    import '@fortawesome/fontawesome-free/css/all.min.css'
+    import { onMount } from 'svelte'
+    import { fade } from "svelte/transition"
   
+    const year = new Date().getFullYear()
     let sites = [
         'Wix',
         'Weebly',
         'Squarespace',
         'Wordpress',
-    ];
+    ]
   
-    let i = -1;
+    let i = -1
 
     onMount(() => {
 		const interval = setInterval(() => {
-			i += 1;
-			i %= sites.length;
-		}, 4500);
+			i += 1
+			i %= sites.length
+		}, 1500);
 
 		return () => {
-			clearInterval(interval);
+			clearInterval(interval)
 		};
 	});
   </script>
@@ -66,9 +67,12 @@
         <!-- Section 1 -->
         <div class="column">
             <h2>Hey there! I'm Court.</h2>
-            <h3>I've been working in tech for 8+ years, helping build enterprise websites for companies like IHS Markit, NextHealth Technologies and Wagmo.</h3>
-            <h3>Recently, I've started helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</h3>
-            <h3>In my free time, I practice yoga, sing in a choir, craft, cook, play outside in the mountains, and have recently been getting into gardening.</h3>
+            <p>I've been working in tech for 8+ years, helping build enterprise websites for companies like IHS Markit, NextHealth Technologies and Wagmo. Feel free to check out my 
+                <a class="accent-color" target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">LinkedIn profile</a>
+                for details.
+            </p>
+            <p>Recently, I've started helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</p>
+            <p>In my free time, I practice yoga, sing in a choir, craft, cook, play outside in the mountains, and have recently been getting into gardening.</p>
         </div>
     
         <!-- Section 2 -->
@@ -79,7 +83,16 @@
 
     <!-- Footer -->
     <div class="footer">
-        <h2><a class="accent-color" target="_blank" href="https://calendly.com/courts-custom-sites/">Let's chat!</a></h2>
+        <h2>
+            <a class="accent-color" target="_blank" href="https://calendly.com/courts-custom-sites/">Let's chat!</a>
+        </h2>
+        <div class="social">
+            <a target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <!-- calc current year -->
+            <p>© { year } Court's Custom Sites. Website by Courtney Noyes.</p>
+        </div>
     </div>
 </div>
 
@@ -169,6 +182,11 @@
 
         /* colors */
         background-color: #0F4C5C;
+
+    }
+    .about p {
+        /* font */
+        font-family: 'Hedvig Letters Sans', sans-serif;
     }
 
     .headshot {
@@ -177,13 +195,19 @@
 
     .footer {
         /* layout */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 20vh;
+        text-align: center;
+        margin: 0 10%;
 
         /* font */
         font-size: 2rem;
+    }
+
+    .social {
+        /* font */
+        font-size: 1.5rem;
+    }
+    .social a {
+        color: white;
     }
 
     /* styles for tablets, desktops, laptops and larger screens */
@@ -214,9 +238,11 @@
             max-width: 23vw;
         }
 
-        .footer {
+        .social {
             /* layout */
-            max-height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 
