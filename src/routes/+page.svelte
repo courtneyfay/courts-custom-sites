@@ -69,13 +69,13 @@
                 customization <br />
                 of your website?
             </h2>
-
-            <!-- todo: animation -->
-
-            <!-- todo: sound effect -->
-
-            <!-- todo: something 3D -->
         </div>
+    </div>
+
+    <!-- FAQ section -->
+    <div class="faq">
+        <h2>I'm happy to help you build out your template site.</h2>
+        <h2>But if you need something custom or a little weird, I'd love to help you build that.</h2>
     </div>
 
     <!-- About section -->
@@ -161,23 +161,11 @@
         margin: 0;
     }
 
-    .about {
-        /* internal layout */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        /* external layout */
-        padding: 14% 0;
-
-        /* font */
-        font-size: 1rem;
-    }
-
     .client {
         /* layout */
-        position: relative;
-        min-height: 175vh;
+        display: flex;
+        flex-direction: column;
+        min-height: 60vh;
 
         /* colors */
         background-color: white;
@@ -189,56 +177,51 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 3% 0;
-        min-width: 500px;
-        min-height: 500px;
-        border-radius: 50%;
+        margin: 4% 0;
 
         /* style */
         background-color: #E36414;
+        min-width: 300px;
+        min-height: 300px;
+        border-radius: 50%;
 
         /* font */
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-align: center;
-    }
-    .definition-1 {
-        position: absolute;
-        left: 15%;
-        top: 3%;
-    }
-    .definition-2 {
-        position: absolute;
-        right: 10%;
-        top: 30%;
-    }
-    .definition-3 {
-        position: absolute;
-        left: 22.5%;
-        bottom: 5%;
     }
     .icon {
         color: white;
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
-    .column {
-        text-align: center;
-        max-width: 80vw;
+    .faq {
+        background-color: #9A031E;
     }
 
     .about {
-        /* layout */
+        /* internal layout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* external layout */
         min-height: 90vh;
+        padding: 14% 0;
 
         /* colors */
         background-color: #0F4C5C;
 
+        /* font */
+        font-size: 1rem;
     }
     .about p {
         /* font */
         font-family: 'Hedvig Letters Sans', sans-serif;
     }
-
+    .column {
+        text-align: center;
+        max-width: 80vw;
+    }
     .headshot {
         width: 75%;
     }
@@ -268,6 +251,47 @@
 
             /* font */
             font-size: 3rem;
+        }
+
+        .client {
+            /* layout */
+            position: relative;
+            min-height: 175vh;
+        }
+        .definition {
+            /* layout */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 3% 0;
+            min-width: 500px;
+            min-height: 500px;
+            border-radius: 50%;
+
+            /* style */
+            background-color: #E36414;
+
+            /* font */
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .definition-1 {
+            position: absolute;
+            left: 15%;
+            top: 3%;
+        }
+        .definition-2 {
+            position: absolute;
+            right: 10%;
+            top: 30%;
+        }
+        .definition-3 {
+            position: absolute;
+            left: 22.5%;
+            bottom: 5%;
+        }
+        .icon {
+            font-size: 4rem;
         }
 
         .client, .about {
