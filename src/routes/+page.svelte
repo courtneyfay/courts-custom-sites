@@ -196,19 +196,13 @@
     .footer {
         /* layout */
         text-align: center;
-        min-height: 20vh;
+        margin: 0 10%;
 
         /* font */
         font-size: 2rem;
     }
 
     .social {
-        /* layout */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 10%;
-
         /* font */
         font-size: 1.5rem;
     }
@@ -242,6 +236,13 @@
             /* layout */
             min-width: 33vw;
             max-width: 23vw;
+        }
+
+        .social {
+            /* layout */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 
