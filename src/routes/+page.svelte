@@ -74,8 +74,16 @@
 
     <!-- FAQ section -->
     <div class="faq">
-        <h2>I'm happy to help you build out your template site.</h2>
-        <h2>But if you need something custom or a little weird, I'd love to help you build that.</h2>
+        <h2>I'm happy to help you build out your template site, but if you need something custom or a little 
+            <p class="weird">
+                w
+                <span class="spin-to-the-left">e</span>
+                <span class="spin-upside-down">i</span>
+                <span class="spin-to-the-right">r</span>
+                <span class="slide-down">d,</span>
+            </p>
+            <span class="right-justified">I would <span class="italic">love</span> to help you build that.</span>
+        </h2>
     </div>
 
     <!-- About section -->
@@ -195,7 +203,45 @@
     }
 
     .faq {
+        /* layout */
+        padding: 5% 10%;
+        min-height: 50vh;
+
+        /* styles */
         background-color: #9A031E;
+
+        /* font */
+        font-size: 2.5rem;
+    }
+    .weird {
+        /* font */
+        text-align: center;
+        font-size: 4rem;
+        letter-spacing: 10px;
+    }
+    .spin-to-the-left {
+        display: inline-block;
+        transform: translateY(25%) rotateZ(310deg);
+    }
+    .spin-upside-down {
+        display: inline-block;
+        transform: translateY(50%) rotateZ(180deg);
+    }
+    .spin-to-the-right {
+        display: inline-block;
+        transform: translateY(75%) rotateZ(70deg);
+    }
+    .slide-down {
+        display: inline-block;
+        transform: translateY(100%);
+    }
+    .right-justified {
+        display: block;
+        text-align: right;
+        padding-top: 10%;
+    }
+    .italic {
+        font-style: italic;
     }
 
     .about {
