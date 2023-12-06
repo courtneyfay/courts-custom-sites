@@ -1,25 +1,26 @@
 <script>
-    import '@fortawesome/fontawesome-free/css/all.min.css';
-    import { onMount } from 'svelte';
-    import { fade } from "svelte/transition";
+    import '@fortawesome/fontawesome-free/css/all.min.css'
+    import { onMount } from 'svelte'
+    import { fade } from "svelte/transition"
   
+    const year = new Date().getFullYear()
     let sites = [
         'Wix',
         'Weebly',
         'Squarespace',
         'Wordpress',
-    ];
+    ]
   
-    let i = -1;
+    let i = -1
 
     onMount(() => {
 		const interval = setInterval(() => {
-			i += 1;
-			i %= sites.length;
-		}, 4500);
+			i += 1
+			i %= sites.length
+		}, 1500);
 
 		return () => {
-			clearInterval(interval);
+			clearInterval(interval)
 		};
 	});
   </script>
@@ -79,7 +80,16 @@
 
     <!-- Footer -->
     <div class="footer">
-        <h2><a class="accent-color" target="_blank" href="https://calendly.com/courts-custom-sites/">Let's chat!</a></h2>
+        <h2>
+            <a class="accent-color" target="_blank" href="https://calendly.com/courts-custom-sites/">Let's chat!</a>
+        </h2>
+        <div class="social">
+            <a target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <!-- calc current year -->
+            <p>© { year } Court's Custom Sites. Website by Courtney Noyes.</p>
+        </div>
     </div>
 </div>
 
@@ -177,13 +187,25 @@
 
     .footer {
         /* layout */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
         min-height: 20vh;
 
         /* font */
         font-size: 2rem;
+    }
+
+    .social {
+        /* layout */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 10%;
+
+        /* font */
+        font-size: 1.5rem;
+    }
+    .social a {
+        color: white;
     }
 
     /* styles for tablets, desktops, laptops and larger screens */
@@ -212,11 +234,6 @@
             /* layout */
             min-width: 33vw;
             max-width: 23vw;
-        }
-
-        .footer {
-            /* layout */
-            max-height: 20vh;
         }
     }
 
