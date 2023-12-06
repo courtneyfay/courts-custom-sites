@@ -211,13 +211,13 @@
         background-color: #9A031E;
 
         /* font */
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .weird {
         /* font */
         text-align: center;
         font-size: 4rem;
-        letter-spacing: 10px;
+        letter-spacing: 5px;
     }
     .spin-to-the-left {
         display: inline-block;
@@ -238,7 +238,7 @@
     .right-justified {
         display: block;
         text-align: right;
-        padding-top: 10%;
+        padding-top: 15%;
     }
     .italic {
         font-style: italic;
@@ -338,6 +338,15 @@
         }
         .icon {
             font-size: 4rem;
+        }
+
+        .faq {
+            /* font */
+            font-size: 2.5rem;
+        }
+        .right-justified {
+            /* layout */
+            padding-top: 10%;
         }
 
         .client, .about {
