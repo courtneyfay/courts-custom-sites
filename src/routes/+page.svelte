@@ -67,9 +67,12 @@
         <!-- Section 1 -->
         <div class="column">
             <h2>Hey there! I'm Court.</h2>
-            <h3>I've been working in tech for 8+ years, helping build enterprise websites for companies like IHS Markit, NextHealth Technologies and Wagmo.</h3>
-            <h3>Recently, I've started helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</h3>
-            <h3>In my free time, I practice yoga, sing in a choir, craft, cook, play outside in the mountains, and have recently been getting into gardening.</h3>
+            <p>I've been working in tech for 8+ years, helping build enterprise websites for companies like IHS Markit, NextHealth Technologies and Wagmo. Feel free to check out my 
+                <a class="accent-color" target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">LinkedIn profile</a>
+                for details.
+            </p>
+            <p>Recently, I've started helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</p>
+            <p>In my free time, I practice yoga, sing in a choir, craft, cook, play outside in the mountains, and have recently been getting into gardening.</p>
         </div>
     
         <!-- Section 2 -->
@@ -179,6 +182,11 @@
 
         /* colors */
         background-color: #0F4C5C;
+
+    }
+    .about p {
+        /* font */
+        font-family: 'Hedvig Letters Sans', sans-serif;
     }
 
     .headshot {
