@@ -107,7 +107,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <h2>
+        <h2 class="bouncing-text-container">
             <a class="accent-color bouncing-text" target="_blank" href="https://calendly.com/courts-custom-sites/">
                 <span class="one">L</span>
                 <span class="two">e</span>
@@ -293,12 +293,36 @@
         font-size: 2rem;
     }
 
-    /* animated CTA link */
+     /* animated CTA link */
+    .bouncing-text-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .bouncing-text {
         display: flex;
         justify-content: center;
         text-decoration: none;
-        /* find a way to make this look like a button without underline */
+        border: 3px solid #E36414;
+        border-radius: 5px;
+        padding: 20px 40px;
+    }
+
+    @keyframes pulse-shadow
+    {
+        0% {
+            box-shadow: 0 0 0 0 rgba(227, 100, 20,.4), 0 0 0 0 rgba(227, 100, 20,.4);
+        }
+        33% {
+            box-shadow: 0 0 0 0 rgba(255,4,0,0), 0 0 0 10px rgba(227, 100, 20,.4);
+        }
+        66% {
+            box-shadow: 0 0 0 0 rgba(255,4,0,0), 0 0 0 30px rgba(255,4,0,0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(227, 100, 20,.4), 0 0 10px rgba(255,4,0,0);
+        }
     }
 
     @keyframes bounce {
@@ -311,35 +335,38 @@
         100% { transform: translateY(0);}
     }
 
+    .bouncing-text:hover {
+        animation: pulse-shadow 4s;
+    }
     .bouncing-text:hover .one  {
-        animation: bounce 1s ease;
+        animation: bounce 1.5s ease;
     }
     .bouncing-text:hover .two {
-        animation: bounce 1s ease .1s;
+        animation: bounce 1.5s ease .1s;
     }
     .bouncing-text:hover .three {
-        animation: bounce 1s ease .2s;
+        animation: bounce 1.5s ease .2s;
     }
     .bouncing-text:hover .four {
-        animation: bounce 1s ease .3s;
+        animation: bounce 1.5s ease .3s;
     }
     .bouncing-text:hover .five {
-        animation: bounce 1s ease .4s;
+        animation: bounce 1.5s ease .4s;
     }
     .bouncing-text:hover .six {
-        animation: bounce 1s ease .5s;
+        animation: bounce 1.5s ease .5s;
     }
     .bouncing-text:hover .seven {
-        animation: bounce 1s ease .6s;
+        animation: bounce 1.5s ease .6s;
     }
     .bouncing-text:hover .eight {
-        animation: bounce 1s ease .7s;
+        animation: bounce 1.5s ease .7s;
     }
     .bouncing-text:hover .nine {
-        animation: bounce 1s ease .8s;
+        animation: bounce 1.5s ease .8s;
     }
     .bouncing-text:hover .ten {
-        animation: bounce 1s ease .9s;
+        animation: bounce 1.5s ease .9s;
     }
 
     .social {
