@@ -37,7 +37,6 @@
 
     <!-- Client section -->
     <div class="client">
-        <!-- Local -->
         <div class="definition definition-1">
             <i class="fa-solid fa-palette icon" />
             <h2>
@@ -203,7 +202,11 @@
         margin: 4% 0;
 
         /* style */
-        background-color: #E36414;
+        background-image: radial-gradient(
+            farthest-corner,
+            #E36414, #5F0F40
+        );
+        /* background-color: #E36414; */
         min-width: 300px;
         min-height: 300px;
         border-radius: 50%;
