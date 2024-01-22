@@ -33,6 +33,20 @@
             <span>Court's Custom Sites</span>
             <span class="accent-color">&#125;</span>
         </h1>
+        <div class="hero">
+            <h2>
+                Let's make the web more
+                <div class="centered">
+                    <span class="flap-wrapper">
+                        <span class="flap" data-text="F">F</span>
+                        <span class="flap" data-text="U">U</span>
+                        <span class="flap" data-text="N">N</span>
+                    </span>
+                    and PLAYFUL
+                </div>
+                <div class="right-justify">together!</div>
+            </h2>
+        </div>
     </div>
 
     <!-- Client section -->
@@ -45,8 +59,6 @@
                 or creative? <br />
             </h2>
         </div>
-
-        <!-- Template website -->
         <div class="definition definition-2">
             <i class="fa-solid fa-wand-sparkles icon" />
             <h2>
@@ -54,8 +66,6 @@
                 bespoke marketing?
             </h2>
         </div>
-
-        <!-- Custom website -->
         <div class="definition definition-3">
             <i class="fa-solid fa-cube icon" />
             <h2>
@@ -97,7 +107,7 @@
                 <a class="accent-color" target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">LinkedIn profile</a>
                 for details.
             </p>
-            <p>Recently, I've started helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</p>
+            <p>Now I'm helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</p>
             <p>In my free time, I practice yoga, sing in a choir, craft, cook, play outside in the mountains, and have recently been getting into gardening.</p>
         </div>
     
@@ -165,14 +175,63 @@
     .header {
         /* layout */
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        min-height: 30vh;
+        min-height: 60vh;
 
         /* font */
         font-family: 'Viaoda Libre', serif;
         font-size: 1.75rem;
+    }
+
+    .hero {
+        padding-top: 3%;
+        width: 95%;
+        padding-left: 3%;
+    }
+
+    .flap-wrapper {
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    .flap {
+        display: inline-block;
+        position: relative;
+        transform-style: preserve-3d;
+        perspective: 500px;
+        -webkit-font-smoothing: antialiased;
+    }
+    .flap::before, .flap::after {
+        position: absolute;
+        top: 0;
+        left: -1px;
+        transform-origin: left top;
+        transition: all ease-out .3s;
+        content: attr(data-text);
+    }
+    .flap::before {
+        z-index: 1;
+        color: rgba(0, 0, 0, .2);
+        transform: scale(1.1, 1) skew(0deg, 20deg);
+    }
+    .flap::after {
+        z-index: 2;
+        color: #5F0F40;
+        text-shadow: -1px 0 1px #5F0F40, 1px 0 1px rgba(0, 0, 0, .8);
+        transform: rotateY(-40deg);
+    }
+    .flap:hover::before {
+        transform: scale(1.1, 1) skew(0deg, 5deg);
+    }
+    .flap:hover::after {
+        transform: rotateY(-10deg);
+    }
+
+    .right-justify {
+        text-align: right;
+        margin-right: 2%;
     }
 
     .accent-color {
@@ -181,6 +240,7 @@
 
     .logo {
         margin: 0;
+        text-align: center;
     }
 
     .client {
@@ -390,7 +450,7 @@
     @media (min-width: 768px) {
         .header {
             /* layout */
-            max-height: 25vh;
+            min-height: 70vh;
 
             /* font */
             font-size: 3rem;
