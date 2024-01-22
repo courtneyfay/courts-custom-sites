@@ -39,42 +39,45 @@
     <div class="client">
         <!-- Local -->
         <div class="definition definition-1">
-            <i class="fa-solid fa-briefcase icon" />
+            <i class="fa-solid fa-palette icon" />
             <h2>
-                Do you freelance <br />
-                or own a small business <br />
-                in Vermont?
+                Are you a <br />
+                designer <br />
+                or creative? <br />
             </h2>
         </div>
 
         <!-- Template website -->
         <div class="definition definition-2">
-            <i class="fa-solid fa-copy icon" />
+            <i class="fa-solid fa-wand-sparkles icon" />
             <h2>
-                Do you need a
-                {#key i}
-                    <div in:fade>
-                        {sites[i] || sites[3]}
-                    </div>
-                {/key}
-                website?
+                Do you value <br/>
+                bespoke marketing?
             </h2>
         </div>
 
         <!-- Custom website -->
         <div class="definition definition-3">
-            <i class="fa-solid fa-palette icon" />
+            <i class="fa-solid fa-cube icon" />
             <h2>
-                Do you crave <br />
-                customization <br />
-                of your website?
+                Do you crave animations, <br />
+                sound effects, <br />
+                or 3D on your site?
             </h2>
         </div>
     </div>
 
     <!-- FAQ section -->
     <div class="faq">
-        <h2>I'm happy to help you build out your template site, but if you need something custom or a little 
+        <h2>I'm happy to help you build out your
+            <span class="centered">
+                {#key i}
+                    <div in:fade>
+                        {sites[i] || sites[3]}
+                    </div>
+                {/key}
+            </span>
+            site, but if you need something custom or a little 
             <p class="weird">
                 w
                 <span class="spin-to-the-left">e</span>
@@ -246,6 +249,9 @@
     .slide-down {
         display: inline-block;
         transform: translateY(100%);
+    }
+    .centered {
+        text-align: center;
     }
     .right-justified {
         display: block;
