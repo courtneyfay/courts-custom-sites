@@ -200,6 +200,24 @@
         padding-left: 3%;
     }
 
+    @keyframes flapLetter {
+        80% {
+            transform: scale(1.1, 1) skew(0deg, 5deg);
+        }
+        100% {
+            transform: scale(1.1, 1) skew(0deg, 20deg);
+        }
+    }
+
+    @keyframes flapShadow {
+        80% {
+            transform: rotateY(-10deg);
+        }
+        100% {
+            transform: rotateY(-40deg);
+        }
+    }
+
     .flap-wrapper {
         color: #fff;
         font-family: sans-serif;
@@ -224,12 +242,14 @@
         z-index: 1;
         color: rgba(0, 0, 0, .2);
         transform: scale(1.1, 1) skew(0deg, 20deg);
+        animation: flapLetter 0.5s linear 0.75s;
     }
     .flap::after {
         z-index: 2;
         color: #5F0F40;
         text-shadow: -1px 0 1px #5F0F40, 1px 0 1px rgba(0, 0, 0, .8);
         transform: rotateY(-40deg);
+        animation: flapShadow 0.5s linear 0.75s;
     }
     .flap:hover::before {
         transform: scale(1.1, 1) skew(0deg, 5deg);
