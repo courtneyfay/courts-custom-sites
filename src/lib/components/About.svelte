@@ -26,6 +26,7 @@
 
 <style>
     .about {
+        color: #FFF9EB;
         background-color: #3AB8A9;
         font-size: 1.75rem;
         height: 100%;
@@ -47,7 +48,7 @@
         background-color: #3AB8A9;
     }
     .link {
-        color: #F8EADD;
+        color: #F5E0CC;
     }
     .headshot {
         width: 50%;

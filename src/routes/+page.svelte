@@ -1,5 +1,4 @@
 <script>
-    import '@fortawesome/fontawesome-free/css/all.min.css'
     import { onMount } from 'svelte'
     import { fade } from "svelte/transition"
     // component imports
@@ -7,13 +6,14 @@
     import CTAButton from '$lib/components/CTAButton.svelte'
     import Hero from '$lib/components/Hero.svelte'
     import About from '$lib/components/About.svelte'
+    import Services from '$lib/components/Services.svelte'
   
     const year = new Date().getFullYear()
     let sites = [
         'Wix',
         'Weebly',
         'Squarespace',
-        'Wordpress',
+        'WordPress',
     ]
   
     let i = -1
@@ -34,33 +34,7 @@
 <div class="page">
     <Hero />
     <About />
-    <!-- Client section -->
-    <div class="client">
-        <div class="definition definition-1">
-            <i class="fa-solid fa-palette icon" />
-            <h2>
-                Are you a <br />
-                designer <br />
-                or creative? <br />
-            </h2>
-        </div>
-        <div class="definition definition-2">
-            <i class="fa-solid fa-wand-sparkles icon" />
-            <h2>
-                Do you value <br/>
-                bespoke marketing?
-            </h2>
-        </div>
-        <div class="definition definition-3">
-            <i class="fa-solid fa-cube icon" />
-            <h2>
-                Do you crave animations, <br />
-                sound effects, <br />
-                or 3D on your site?
-            </h2>
-        </div>
-    </div>
-
+    <Services />
     <!-- FAQ section -->
     <div class="faq">
         <h2>I'm happy to help you build out your
@@ -107,7 +81,7 @@
     /* styles for mobile screens */
     .page {
         /* font */
-        color: #FFEDF0;
+        color: #48090F;
         font-family: 'Goudy Bookletter 1911', serif;
 
         /* page layout */
@@ -115,42 +89,6 @@
         flex-direction: column;
 
         background-color: #FFF9EB;
-    }
-
-    .client {
-        /* layout */
-        display: flex;
-        flex-direction: column;
-        min-height: 60vh;
-
-        /* colors */
-        background-color: white;
-        color: #5F0F40;
-    }
-
-    .definition {
-        /* layout */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 4% 0;
-
-        /* style */
-        background-image: radial-gradient(
-            farthest-corner,
-            #E36414, #5F0F40
-        );
-        min-width: 300px;
-        min-height: 300px;
-        border-radius: 50%;
-
-        /* font */
-        font-size: 1rem;
-        text-align: center;
-    }
-    .icon {
-        color: white;
-        font-size: 2rem;
     }
 
     .faq {
@@ -217,47 +155,6 @@
 
     /* styles for tablets, desktops, laptops and larger screens */
     @media (min-width: 768px) {
-        .client {
-            /* layout */
-            position: relative;
-            min-height: 175vh;
-        }
-        .definition {
-            /* layout */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 3% 0;
-            min-width: 500px;
-            min-height: 500px;
-            border-radius: 50%;
-
-            /* style */
-            background-color: #E36414;
-
-            /* font */
-            font-size: 1.5rem;
-            text-align: center;
-        }
-        .definition-1 {
-            position: absolute;
-            left: 15%;
-            top: 3%;
-        }
-        .definition-2 {
-            position: absolute;
-            right: 10%;
-            top: 30%;
-        }
-        .definition-3 {
-            position: absolute;
-            left: 22.5%;
-            bottom: 5%;
-        }
-        .icon {
-            font-size: 4rem;
-        }
-
         .faq {
             /* font */
             font-size: 2.5rem;
@@ -266,19 +163,6 @@
             /* layout */
             padding-top: 10%;
         }
-
-        .client {
-            /* layout */
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            max-height: 75vh;
-            padding: 0;
-
-            /* font */
-            font-size: 1.4rem;
-        }
-
         .social {
             /* layout */
             display: flex;
