@@ -1,5 +1,5 @@
 <script>
-
+    import CTAButton from '$lib/components/CTAButton.svelte'
 </script>
 
 <div class="nav-bar">
@@ -7,7 +7,7 @@
         <img src="/logo.svg" alt="court's custom sites logo" />
     </div>
     <div class="cta-button-wrapper">
-        <button>Let's chat</button>
+        <CTAButton />
     </div>
 </div>
 
@@ -16,7 +16,6 @@
     .nav-bar {
         /* styles */
         background-color: #FFF9EB;
-        /* background-color: hotpink; */
 
         /* organizes the logo and CTA button */
         display: flex;
