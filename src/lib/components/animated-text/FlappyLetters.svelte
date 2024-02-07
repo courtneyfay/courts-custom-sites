@@ -1,9 +1,13 @@
-<!-- make it reusable by propping in text FUN from parent -->
+<script>
+    export let text = ""
+</script>
 
 <span class="flap-wrapper">
-    <span class="flap" data-text="F">F</span>
-    <span class="flap" data-text="U">U</span>
-    <span class="flap" data-text="N">N</span>
+    {#each text as letter}
+        <span class="flap" data-text={letter}>
+            { letter }
+        </span>
+    {/each}
 </span>
 
 <style>
@@ -26,8 +30,7 @@
     }
 
     .flap-wrapper {
-        color: #fff;
-        font-family: sans-serif;
+        color: #FFF9EB;
         font-weight: 700;
     }
     .flap {
