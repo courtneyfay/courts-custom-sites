@@ -6,6 +6,7 @@
     import NavBar from '$lib/components/NavBar.svelte'
     import CTAButton from '$lib/components/CTAButton.svelte'
     import Hero from '$lib/components/Hero.svelte'
+    import About from '$lib/components/About.svelte'
   
     const year = new Date().getFullYear()
     let sites = [
@@ -32,7 +33,7 @@
 <NavBar />
 <div class="page">
     <Hero />
-    
+    <About />
     <!-- Client section -->
     <div class="client">
         <div class="definition definition-1">
@@ -82,25 +83,6 @@
         </h2>
     </div>
 
-    <!-- About section -->
-    <div class="about">
-        <!-- Section 1 -->
-        <div class="column">
-            <h2>Hello beautiful people! I'm Court.</h2>
-            <p>I've been working in tech for 8+ years, helping build enterprise websites for companies like IHS Markit, NextHealth Technologies and Wagmo. Feel free to check out my 
-                <a class="accent-color" target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">LinkedIn profile</a>
-                for details.
-            </p>
-            <p>Now I'm helping local clients -- like a UX designer and a non-profit arts organization -- get their websites spun up.</p>
-            <p>In my free time, I practice yoga, sing in a choir, craft, cook, play outside in the mountains, and have recently been getting into gardening.</p>
-        </div>
-    
-        <!-- Section 2 -->
-        <div class="column">
-            <img class="headshot" src="/guitar-headshot.jpg" alt="Court playing the guitar"/>
-        </div>
-    </div>
-
     <!-- Footer -->
     <div class="footer">
         <CTAButton />
@@ -135,10 +117,6 @@
         background-color: #FFF9EB;
     }
 
-    .accent-color {
-        color: #FB8B24;
-    }
-
     .client {
         /* layout */
         display: flex;
@@ -162,7 +140,6 @@
             farthest-corner,
             #E36414, #5F0F40
         );
-        /* background-color: #E36414; */
         min-width: 300px;
         min-height: 300px;
         border-radius: 50%;
@@ -219,34 +196,6 @@
     }
     .italic {
         font-style: italic;
-    }
-
-    .about {
-        /* internal layout */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        /* external layout */
-        min-height: 90vh;
-        padding: 14% 0;
-
-        /* colors */
-        background-color: #0F4C5C;
-
-        /* font */
-        font-size: 1rem;
-    }
-    .about p {
-        /* font */
-        font-family: 'Hedvig Letters Sans', sans-serif;
-    }
-    .column {
-        text-align: center;
-        max-width: 80vw;
-    }
-    .headshot {
-        width: 75%;
     }
 
     .footer {
@@ -318,7 +267,7 @@
             padding-top: 10%;
         }
 
-        .client, .about {
+        .client {
             /* layout */
             flex-direction: row;
             align-items: center;
@@ -328,12 +277,6 @@
 
             /* font */
             font-size: 1.4rem;
-        }
-
-        .column {
-            /* layout */
-            min-width: 33vw;
-            max-width: 23vw;
         }
 
         .social {

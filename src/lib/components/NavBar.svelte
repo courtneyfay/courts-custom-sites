@@ -15,6 +15,7 @@
 <style>
     .nav-bar {
         /* styles */
+        z-index: 3;
         background-color: #FFF9EB;
 
         /* organizes the logo and CTA button */
