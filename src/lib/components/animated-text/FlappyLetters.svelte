@@ -30,8 +30,9 @@
     }
 
     .flap-wrapper {
-        color: #FFF9EB;
+        font-family: "Hedvig Letters Sans", sans serif;
         font-weight: 700;
+        font-size: 5.5rem;
     }
     .flap {
         display: inline-block;
@@ -56,8 +57,8 @@
     }
     .flap::after {
         z-index: 2;
-        color: #3AB8A9;
-        text-shadow: -1px 0 1px #3AB8A9, 1px 0 1px rgba(0, 0, 0, .8);
+        color: var(--color, #3AB8A9);
+        text-shadow: -1px 0 1px var(--color, #3AB8A9), 1px 0 1px rgba(0, 0, 0, .8);
         transform: rotateY(-40deg);
         animation: flapShadow 0.5s linear 0.75s;
     }

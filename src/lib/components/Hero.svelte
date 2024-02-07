@@ -1,6 +1,5 @@
 <script>
     import FlappyLetters from '$lib/components/animated-text/FlappyLetters.svelte'
-    import OutliningPlayful from  '$lib/components/animated-text/OutliningPlayful.svelte'
 </script>
 
 <div class="wrapper">
@@ -9,7 +8,7 @@
         <div>
             <FlappyLetters text="FUN" />
             and
-            <OutliningPlayful />
+            <FlappyLetters text="PLAYFUL" --color="#E63946" />
         </div>
         <div>together!</div>
     </h1>
