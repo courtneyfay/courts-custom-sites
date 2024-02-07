@@ -2,6 +2,7 @@
     import '@fortawesome/fontawesome-free/css/all.min.css'
     import { onMount } from 'svelte'
     import { fade } from "svelte/transition"
+    import NavBar from '$lib/components/NavBar.svelte'
   
     const year = new Date().getFullYear()
     let sites = [
@@ -25,14 +26,10 @@
 	});
   </script>
 
+<NavBar />
 <div class="page">
     <!-- Header -->
     <div class="header">
-        <h1 class="logo">
-            <span class="accent-color">&#123;</span>
-            <span>Court's Custom Sites</span>
-            <span class="accent-color">&#125;</span>
-        </h1>
         <div class="hero">
             <h2>
                 Let's make the web more
@@ -171,14 +168,7 @@
         display: flex;
         flex-direction: column;
 
-        /* background color */
-        background-color: #5F0F40; 
-        /* colors */
-        /* #5F0F40 - deep purple */
-        /* #9A031E - maroon */
-        /* #E36414 - dark orange */
-        /* #0F4C5C - turquoise */
-        /* #FB8B24 - light yellow */
+        background-color: #FFF9EB;
     }
 
     .header {
@@ -329,11 +319,6 @@
 
     .accent-color {
         color: #FB8B24;
-    }
-
-    .logo {
-        margin: 0;
-        text-align: center;
     }
 
     .client {
@@ -543,7 +528,7 @@
     @media (min-width: 768px) {
         .header {
             /* layout */
-            min-height: 70vh;
+            min-height: 60vh;
 
             /* font */
             font-size: 3rem;
