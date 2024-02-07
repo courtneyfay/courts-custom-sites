@@ -6,7 +6,9 @@
     <div class="logo-wrapper">
         <img src="/logo.svg" alt="court's custom sites logo" />
     </div>
-    <button>Let's chat</button>
+    <div class="cta-button-wrapper">
+        <button>Let's chat</button>
+    </div>
 </div>
 
 
@@ -14,6 +16,7 @@
     .nav-bar {
         /* styles */
         background-color: #FFF9EB;
+        /* background-color: hotpink; */
 
         /* organizes the logo and CTA button */
         display: flex;
@@ -29,5 +32,10 @@
 
     .logo-wrapper {
         width: 150px;
+        padding: 1.5% 0 1.5% 2%;
+    }
+
+    .cta-button-wrapper {
+        padding-right: 2%;
     }
 </style>
