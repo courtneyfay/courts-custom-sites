@@ -24,15 +24,16 @@
 </script>
 
 <div class="faq">
-    <h2>I'm happy to help you build out your
-        <span class="centered">
+    <h2 class="centered">I'm happy to help you build out your <br />
+        <span>
             {#key i}
-                <div in:fade>
+                <span in:fade>
                     {sites[i] || sites[3]}
-                </div>
+                </span>
             {/key}
         </span>
-        site, but if you need something custom or a little 
+        site, <br />
+        but if you need something custom or a little 
         <p class="weird">
             w
             <span class="spin-to-the-left">e</span>
@@ -52,7 +53,6 @@
         font-size: 2.5rem;
     }
     .weird {
-        /* font */
         text-align: center;
         font-size: 4rem;
         letter-spacing: 5px;
