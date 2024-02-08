@@ -29,24 +29,17 @@
 
     .card-wrapper {
         width: 100%;
-        /* how to keep it from looking pixelated */
-        background-image: url("services-background.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        height: 50vh;
-        background-blend-mode: multiply;
-
-        position: relative;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .card {
-        width: 20%;
-        /* 18 */
-        height: 65%;
-        /* 62%; */
+        width: 75%;
+        height: 225px;
         border-radius: 50%;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -55,20 +48,10 @@
 
     .service-1 {
         background-color: #3AB8A9;
-        position: absolute;
-        top: 17%;
-        left: 25%;
     }
 
     .service-2 {
         background-color: #E63946;
-        position: absolute;
-        top: 17%;
-        right: 25%;
-    }
-
-    .service-type {
-        font-size: 2.5rem;
     }
 
     .italicize {
@@ -77,7 +60,6 @@
     }
 
     .price {
-        font-size: 2rem;
         font-family: "Hedvig Letters Sans", sans-serif;
         font-weight: 700;
         color: #FFF9EB;
@@ -87,7 +69,45 @@
         width: 25%;
     }
 
-     /* styling for extra-large screens */
+     /* Medium screens and up */
+     @media only screen and (min-width: 768px) {
+        .card-wrapper {
+            background-image: url("services-background.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            height: 50vh;
+            background-blend-mode: multiply;
+            position: relative;
+        }
+
+        .card {
+            width: 20%;
+            height: 65%;
+        }
+
+        .service-1 {
+            position: absolute;
+            top: 17%;
+            left: 25%;
+        }
+
+        .service-2 {
+            position: absolute;
+            top: 17%;
+            right: 25%;
+        }
+
+        .service-type {
+            font-size: 2.5rem;
+        }
+
+        .price {
+            font-size: 2rem;
+        }
+     }
+
+     /* Extra-large screens and up */
     @media only screen and (min-width: 1500px) {
         .card {
             width: 18%;

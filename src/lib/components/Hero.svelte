@@ -21,7 +21,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 95vh;
+        padding-top: 25%;
+        padding-bottom: 5%;
 
         /* font */
         font-size: 1.5rem;
@@ -37,7 +38,8 @@
     @media only screen and (min-width: 768px) {
         .wrapper {
             font-size: 2rem;
-            min-height: 75vh;
+            padding-top: 8%;
+            padding-bottom: 4%;
         }
         .responsive {
             display: none;
