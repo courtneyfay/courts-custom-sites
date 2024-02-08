@@ -48,8 +48,7 @@
     .faq {
         padding: 5% 10%;
         min-height: 50vh;
-        background-color: #9A031E;
-        color: #FFF9EB;
+        background-color: #E63946;
         font-size: 2.5rem;
     }
     .weird {
