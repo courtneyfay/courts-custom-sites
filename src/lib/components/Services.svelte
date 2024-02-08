@@ -41,7 +41,6 @@
     }
 
     .card {
-        color: white;
         width: 18%;
         height: 62%;
         border-radius: 50%;
@@ -79,7 +78,7 @@
         font-size: 2rem;
         font-family: "Hedvig Letters Sans", sans-serif;
         font-weight: 700;
-        color: #48090F;
+        color: #FFF9EB;
     }
 
     .icon-wrapper {
