@@ -41,8 +41,10 @@
     }
 
     .card {
-        width: 18%;
-        height: 62%;
+        width: 20%;
+        /* 18 */
+        height: 65%;
+        /* 62%; */
         border-radius: 50%;
 
         display: flex;
@@ -54,15 +56,15 @@
     .service-1 {
         background-color: #3AB8A9;
         position: absolute;
-        top: 18%;
-        left: 27%;
+        top: 17%;
+        left: 25%;
     }
 
     .service-2 {
         background-color: #E63946;
         position: absolute;
-        top: 18%;
-        right: 27%;
+        top: 17%;
+        right: 25%;
     }
 
     .service-type {
@@ -83,5 +85,23 @@
 
     .icon-wrapper {
         width: 25%;
+    }
+
+     /* styling for extra-large screens */
+    @media only screen and (min-width: 1500px) {
+        .card {
+            width: 18%;
+            height: 62%;
+        }
+
+        .service-1 {
+            top: 18%;
+            left: 27%;
+        }
+
+        .service-2 {
+            top: 18%;
+            right: 27%;
+        }
     }
 </style>

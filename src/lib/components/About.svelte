@@ -10,7 +10,8 @@
             </a>
             and founder of Court's Custom Sites.
         </p>
-        <p>I build one-of-a-kind websites for folks who value bespoke marketing and <br />
+        <p>I build one-of-a-kind websites <br />
+            for folks who value bespoke marketing and <br />
             need more pizzazz than the average WordPress template.</p>
         <p>I love using 3D, <br />
             sound effects, <br />
@@ -42,7 +43,7 @@
         background-color: #3AB8A9;
         position: absolute;
         top: 25%;
-        left: 3%;
+        left: 6%;
     }
     .welcome {
         background-color: #3AB8A9;
@@ -54,4 +55,11 @@
         width: 50%;
         border-radius: 2%;
     }
+
+    /* styling for extra-large screens */
+    @media only screen and (min-width: 1500px) {
+    .description-wrapper {
+        left: 16%;
+    }
+}
 </style>
