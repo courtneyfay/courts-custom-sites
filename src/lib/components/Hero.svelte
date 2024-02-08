@@ -21,8 +21,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-top: 25%;
-        padding-bottom: 5%;
+        padding: 25% 6% 5%;
 
         /* font */
         font-size: 1.5rem;
@@ -34,8 +33,15 @@
         display: inline;
     }
 
-    /* Medium screens and up */
+    /* Tablet screens and up */
     @media only screen and (min-width: 768px) {
+        .wrapper {
+            padding-top: 16%;
+        }
+    } 
+
+    /* Laptop screens and up */
+    @media only screen and (min-width: 992px) {
         .wrapper {
             font-size: 2rem;
             padding-top: 8%;

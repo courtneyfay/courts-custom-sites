@@ -33,7 +33,7 @@
         width: 45px;
     }
 
-    /* Medium screens and up */
+    /* Tablet screens and up */
     @media only screen and (min-width: 768px) {
         .social {
             flex-direction: row;

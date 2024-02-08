@@ -69,8 +69,8 @@
         transform: rotateY(-10deg);
     }
 
-    /* Medium screens and up */
-    @media only screen and (min-width: 768px) {
+    /* Laptop screens and up */
+    @media only screen and (min-width: 992px) {
         .flap-wrapper {
             font-size: 5.5rem;
         }

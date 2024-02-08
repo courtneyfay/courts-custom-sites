@@ -85,8 +85,8 @@
         font-style: italic;
     }
 
-    /* Medium screens and up */
-    @media only screen and (min-width: 768px) {
+    /* Laptop screens and up */
+    @media only screen and (min-width: 992px) {
         .value-prop-wrapper {
             font-size: 2.5rem;
         }

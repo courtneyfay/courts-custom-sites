@@ -55,8 +55,8 @@
         border-radius: 2%;
     }
 
-    /* Medium screens and up */
-    @media only screen and (min-width: 768px) {
+    /* Laptop screens and up */
+    @media only screen and (min-width: 992px) {
         .about {
             height: 100%;
             text-align: right;
