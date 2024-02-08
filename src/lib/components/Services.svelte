@@ -1,15 +1,21 @@
 <div class="services-wrapper">
     <h2>Services</h2>
     <div class="card-wrapper">
-        <div class="card">
-            Template site
-            starting at
-            $1500
+        <div class="card service-1">
+            <div class="icon-wrapper">
+                <img src="/moon-icon.svg" alt="icon of the moon"/>
+            </div>
+            <span class="service-type">Template Site</span>
+            <span class="italicize">starting at</span>
+            <span class="price">$1500</span>
         </div>
-        <div class="card">
-            Custom site
-            starting at
-            $3000        
+        <div class="card service-2">
+            <div class="icon-wrapper">
+                <img src="/stars-icon.svg" alt="icon of the stars"/>
+            </div>
+            <span class="service-type">Custom Site</span>
+            <span class="italicize">starting at</span>
+            <span class="price">$3000</span>       
         </div>
     </div>
 </div>
@@ -30,11 +36,53 @@
         background-size: contain;
         height: 50vh;
         background-blend-mode: multiply;
+
+        position: relative;
     }
 
     .card {
         color: white;
-        width: 40%;
-        border-radius: 2%;
+        width: 18%;
+        height: 62%;
+        border-radius: 50%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-1 {
+        background-color: #3AB8A9;
+        position: absolute;
+        top: 18%;
+        left: 27%;
+    }
+
+    .service-2 {
+        background-color: #E63946;
+        position: absolute;
+        top: 18%;
+        right: 27%;
+    }
+
+    .service-type {
+        font-size: 2.5rem;
+    }
+
+    .italicize {
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 2rem;
+        font-family: "Hedvig Letters Sans", sans-serif;
+        font-weight: 700;
+        color: #48090F;
+    }
+
+    .icon-wrapper {
+        width: 25%;
     }
 </style>
