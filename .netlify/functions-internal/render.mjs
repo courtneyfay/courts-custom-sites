@@ -1,0 +1,36 @@
+import { init } from '../serverless.js';
+
+export const handler = init((() => {
+function __memo(fn) {
+	let value;
+	return () => value ??= (value = fn());
+}
+
+return {
+	appDir: "_app",
+	appPath: "_app",
+	assets: new Set(["favicon.svg","guitar-headshot.jpg","linked-in-icon.svg","logo.svg","moon-icon.svg","services-background.png","stars-icon.svg"]),
+	mimeTypes: {".svg":"image/svg+xml",".jpg":"image/jpeg",".png":"image/png"},
+	_: {
+		client: {"start":"_app/immutable/entry/start.a467d108.js","app":"_app/immutable/entry/app.f5daffe5.js","imports":["_app/immutable/entry/start.a467d108.js","_app/immutable/chunks/scheduler.0f962ddd.js","_app/immutable/chunks/singletons.11281b61.js","_app/immutable/entry/app.f5daffe5.js","_app/immutable/chunks/scheduler.0f962ddd.js","_app/immutable/chunks/index.d9688f13.js"],"stylesheets":[],"fonts":[]},
+		nodes: [
+			__memo(() => import('../server/nodes/0.js')),
+			__memo(() => import('../server/nodes/1.js')),
+			__memo(() => import('../server/nodes/2.js'))
+		],
+		routes: [
+			{
+				id: "/",
+				pattern: /^\/$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 2 },
+				endpoint: null
+			}
+		],
+		matchers: async () => {
+			
+			return {  };
+		}
+	}
+}
+})());
