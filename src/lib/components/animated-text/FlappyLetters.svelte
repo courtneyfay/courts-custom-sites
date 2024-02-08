@@ -32,7 +32,7 @@
     .flap-wrapper {
         font-family: "Hedvig Letters Sans", sans serif;
         font-weight: 700;
-        font-size: 4rem;
+        font-size: 4.5rem;
     }
     .flap {
         display: inline-block;

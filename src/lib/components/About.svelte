@@ -20,7 +20,7 @@
             to help your unique style stand out.</p>
     </div>
 
-    <div>
+    <div class="headshot-wrapper">
         <img class="headshot" src="/guitar-headshot.jpg" alt="Court playing the guitar"/>
     </div>
 </div>
@@ -29,21 +29,17 @@
     .about {
         background-color: #3AB8A9;
         font-size: 1.75rem;
-        height: 100%;
-        text-align: right;
-        position: relative;
         padding: 6%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
     .welcome-wrapper {
-        position: absolute;
-        top: 15%;
-        left: 33%;
+        order: 1;
     }
     .description-wrapper {
         background-color: #3AB8A9;
-        position: absolute;
-        top: 25%;
-        left: 6%;
+        order: 3;
     }
     .welcome {
         background-color: #3AB8A9;
@@ -51,15 +47,40 @@
     .link {
         color: #FFF9EB;
     }
+    .headshot-wrapper {
+        order: 2;
+    }
     .headshot {
-        width: 50%;
+        width: 75%;
         border-radius: 2%;
     }
 
+    /* Medium screens and up */
+    @media only screen and (min-width: 768px) {
+        .about {
+            height: 100%;
+            text-align: right;
+            position: relative;
+        }
+        .welcome-wrapper {
+            position: absolute;
+            top: 15%;
+            left: 33%;
+        }
+        .description-wrapper {
+            position: absolute;
+            top: 25%;
+            left: 6%;
+        }
+        .headshot {
+            width: 50%;
+        }
+    } 
+
     /* Extra-large screens and up */
     @media only screen and (min-width: 1500px) {
-    .description-wrapper {
-        left: 16%;
-    }
+        .description-wrapper {
+            left: 16%;
+        }
 }
 </style>
