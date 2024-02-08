@@ -39,9 +39,10 @@
         left: 33%;
     }
     .description-wrapper {
+        background-color: #3AB8A9;
         position: absolute;
         top: 25%;
-        left: 7%;
+        left: 3%;
     }
     .welcome {
         background-color: #3AB8A9;

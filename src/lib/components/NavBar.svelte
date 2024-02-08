@@ -32,7 +32,7 @@
 
     .logo-wrapper {
         width: 150px;
-        padding: 1.5% 0 1.5% 2%;
+        padding: 1.25% 0 1.25% 1.75%;
     }
 
     .cta-button-wrapper {
