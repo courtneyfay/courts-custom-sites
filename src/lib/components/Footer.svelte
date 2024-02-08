@@ -9,7 +9,7 @@
     <div class="social">
         <a target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">
             <div class="icon-wrapper">
-                <img src="/instagram-icon.svg" alt="icon of instagram"/>
+                <img src="/linked-in-icon.svg" alt="icon of linked in"/>
             </div>
         </a>
         <p>© { year } Court's Custom Sites. Website by Courtney Noyes.</p>
@@ -29,6 +29,6 @@
         justify-content: space-between;
     }
     .icon-wrapper {
-        width: 35px;
+        width: 45px;
     }
 </style>
