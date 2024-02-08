@@ -56,7 +56,7 @@
         border-radius: 2%;
     }
 
-    /* styling for extra-large screens */
+    /* Extra-large screens and up */
     @media only screen and (min-width: 1500px) {
     .description-wrapper {
         left: 16%;

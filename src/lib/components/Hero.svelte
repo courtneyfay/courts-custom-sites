@@ -6,8 +6,8 @@
     <h1>
         Let's make the web more
         <div>
-            <FlappyLetters text="FUN" />
-            and
+            <FlappyLetters text="FUN" /> <br class="responsive"/>
+            and <br class="responsive"/>
             <FlappyLetters text="PLAYFUL" --color="#E63946" />
         </div>
         <div>together!</div>
@@ -21,11 +21,26 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-height: 75vh;
+        min-height: 95vh;
 
         /* font */
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #48090F;
         text-align: center;
     }
+
+    .responsive {
+        display: inline;
+    }
+
+    /* Medium screens and up */
+    @media only screen and (min-width: 768px) {
+        .wrapper {
+            font-size: 2rem;
+            min-height: 75vh;
+        }
+        .responsive {
+            display: none;
+        }
+    } 
 </style>

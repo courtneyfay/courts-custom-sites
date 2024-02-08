@@ -23,7 +23,7 @@
 	})
 </script>
 
-<div class="faq">
+<div class="value-prop-wrapper">
     <h2 class="centered">I'm happy to help you build out your <br />
         <span>
             {#key i}
@@ -46,11 +46,11 @@
 </div>
 
 <style>
-    .faq {
+    .value-prop-wrapper {
         padding: 5% 10%;
         min-height: 50vh;
         background-color: #E63946;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .weird {
         text-align: center;
@@ -84,4 +84,11 @@
     .italic {
         font-style: italic;
     }
+
+    /* Medium screens and up */
+    @media only screen and (min-width: 768px) {
+        .value-prop-wrapper {
+            font-size: 2.5rem;
+        }
+    } 
 </style>

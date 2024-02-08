@@ -32,7 +32,7 @@
     .flap-wrapper {
         font-family: "Hedvig Letters Sans", sans serif;
         font-weight: 700;
-        font-size: 5.5rem;
+        font-size: 4rem;
     }
     .flap {
         display: inline-block;
@@ -68,4 +68,11 @@
     .flap:hover::after {
         transform: rotateY(-10deg);
     }
+
+    /* Medium screens and up */
+    @media only screen and (min-width: 768px) {
+        .flap-wrapper {
+            font-size: 5.5rem;
+        }
+    } 
 </style>

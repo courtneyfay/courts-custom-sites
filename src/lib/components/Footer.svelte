@@ -27,8 +27,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: column;
     }
     .icon-wrapper {
         width: 45px;
     }
+
+    /* Medium screens and up */
+    @media only screen and (min-width: 768px) {
+        .social {
+            flex-direction: row;
+        }
+    } 
 </style>
