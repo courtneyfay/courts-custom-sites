@@ -8,6 +8,7 @@
             <a class="link" target="_blank" href="https://www.linkedin.com/in/courtneynoyes/">
                 Software engineer,
             </a>
+            <br />
             and founder of Court's Custom Sites.
         </p>
         <p>I build one-of-a-kind websites <br />
@@ -41,6 +42,9 @@
         background-color: #3AB8A9;
         order: 3;
     }
+    .description-wrapper h3 {
+        margin: 0;
+    }
     .welcome {
         background-color: #3AB8A9;
     }
@@ -56,7 +60,7 @@
     }
 
     /* Laptop screens and up */
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1224px) {
         .about {
             height: 100%;
             text-align: right;
@@ -64,23 +68,42 @@
         }
         .welcome-wrapper {
             position: absolute;
-            top: 15%;
+            top: 5%;
             left: 33%;
         }
         .description-wrapper {
             position: absolute;
-            top: 25%;
-            left: 6%;
+            top: 21%;
+            left: 0;
         }
         .headshot {
             width: 50%;
         }
-    } 
+    }
+
+    /* Slightly larger Laptop screens and up */
+    @media only screen and (min-width: 1300px) {
+        .description-wrapper {
+            left: 4%;
+        }
+    }
+
+    /* Large screens and up */
+    @media only screen and (min-width: 1500px) {
+        .welcome-wrapper {
+            top: 10%;
+            left: 37%;
+        }
+
+        .description-wrapper {
+            left: 8%;
+        }
+    }
 
     /* Extra-large screens and up */
-    @media only screen and (min-width: 1500px) {
+    @media only screen and (min-width: 1700px) {
         .description-wrapper {
             left: 16%;
         }
-}
+    }
 </style>

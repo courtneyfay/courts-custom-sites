@@ -69,20 +69,21 @@
         width: 25%;
     }
 
-    /* Tablet screens and up */
-    @media only screen and (min-width: 768px) {
+    /* Tablets and up */
+    @media only screen and (min-width: 650px) {
         .card-wrapper {
-            height: 60vh;
+            height: 35vh;
+            flex-direction: row;
         }
 
         .card {
             width: 45%;
-            height: 45%;
+            height: 85%;
         }
     }
 
     /* Laptop screens and up */
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1224px) {
         .card-wrapper {
             background-image: url("$img/services-background.png");
             background-repeat: no-repeat;

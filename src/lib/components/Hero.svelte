@@ -41,7 +41,7 @@
     } 
 
     /* Laptop screens and up */
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1224px) {
         .wrapper {
             font-size: 2rem;
             padding-top: 8%;
