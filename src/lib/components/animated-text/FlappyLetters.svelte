@@ -70,7 +70,7 @@
     }
 
     /* Laptop screens and up */
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1224px) {
         .flap-wrapper {
             font-size: 5.5rem;
         }

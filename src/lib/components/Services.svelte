@@ -82,7 +82,7 @@
     }
 
     /* Laptop screens and up */
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1224px) {
         .card-wrapper {
             background-image: url("$img/services-background.png");
             background-repeat: no-repeat;

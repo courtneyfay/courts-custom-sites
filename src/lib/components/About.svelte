@@ -56,7 +56,7 @@
     }
 
     /* Laptop screens and up */
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 1224px) {
         .about {
             height: 100%;
             text-align: right;
