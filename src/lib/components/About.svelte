@@ -1,6 +1,6 @@
 <div class="about">
     <div class="welcome-wrapper">
-        <h2 class="welcome">Hello beautiful creatives!</h2>
+        <h2 class="welcome">Hey beautiful people!</h2>
     </div>
     <div class="description-wrapper">
         <h3>I'm Courtney Noyes.</h3>

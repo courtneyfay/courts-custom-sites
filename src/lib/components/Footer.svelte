@@ -12,7 +12,7 @@
                 <img src="/linked-in-icon.svg" alt="icon of linked in"/>
             </div>
         </a>
-        <p>© { year } Court's Custom Sites. Website by Courtney Noyes.</p>
+        <p>© { year } Court's Custom Sites. Website hand-crafted by Courtney Noyes.</p>
     </div>
 </div>
 
