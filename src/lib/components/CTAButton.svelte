@@ -1,6 +1,6 @@
 <script></script>
 
-<h2 class="bouncing-text-container">
+<span class="bouncing-text-container">
     <a class="bouncing-text" target="_blank" href="https://calendly.com/courts-custom-sites/">
         <span class="one">L</span>
         <span class="two">e</span>
@@ -14,13 +14,16 @@
         <span class="nine">t</span>
         <span class="ten">!</span>
     </a>
-</h2>
+</span>
 
 <style>
     .bouncing-text-container {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        font-size: 1.5em;
+        margin: .75em 0;
     }
 
     .bouncing-text {
